@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeShopApp.CoffeeList"
+             BackgroundColor="#FAF9F6"
+                >
+
+    <StackLayout Padding="10,5,10,0">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="40" Margin="0,15,0,10">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label FontSize="18" TextColor="Black" FontAttributes="Bold">Welcome</Label>
+                <Label x:Name="userLabel" FontSize="18" TextColor="#B4846C" FontAttributes="Bold">User</Label>
+            </StackLayout>
+
+            <Frame Padding="0" CornerRadius="50" WidthRequest="180" Margin="0,-5,0,0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Image Source="user" Aspect="AspectFit" HeightRequest="25" Margin="0,0,0,0"></Image>
+                    <Button HeightRequest="40" BackgroundColor="#f6f6f6" FontAttributes="Bold" Text="Visit Profile" CornerRadius="30" WidthRequest="140" Margin="0,0,-12,0" Clicked="Button_Clicked_VisitProfile"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Margin="0,0,0,10">
+            <Label FontSize="20" TextColor="Black" FontAttributes="Italic">It's a great</Label>
+            <Label FontSize="20" TextColor="#B4846C" FontAttributes="Italic">day for Coffee.</Label>
+        </StackLayout>
+
+        <Image Source="coffeeCup" Aspect="AspectFit" HeightRequest="70" Margin="0,0,0,30"></Image>
+
+        <Frame Padding="0,0,0,0" CornerRadius="50" HeightRequest="70" Margin="0,-5,0,0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                <Image Source="espresso" Aspect="AspectFit" HeightRequest="50" Margin="0,0,0,0"></Image>
+                <Button Clicked="Button_Clicked_Espresso" TextTransform="None" HeightRequest="60" VerticalOptions="Center" BackgroundColor="#f6f6f6" Text="Espresso                             ➤" CornerRadius="30" WidthRequest="300" Margin="0,0,-12,0" FontAttributes="Bold" FontSize="20"></Button>
+            </StackLayout>
+        </Frame>
+        
+        <Frame Padding="0,0,0,0" CornerRadius="50" HeightRequest="70" Margin="0,10,0,0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                <Image Source="cappuccino" Scale="0.9" Aspect="AspectFit" HeightRequest="50" Margin="0,0,0,0"></Image>
+                <Button Clicked="Button_Clicked_Cappuccino" TextTransform="None" HeightRequest="60" VerticalOptions="Center" BackgroundColor="#f6f6f6" Text="Cappuccino                         ➤" CornerRadius="30" WidthRequest="300" Margin="0,0,-12,0" FontAttributes="Bold" FontSize="20"></Button>
+            </StackLayout>
+        </Frame>
+        
+        <Frame Padding="0,0,0,0" CornerRadius="50" HeightRequest="70" Margin="0,10,0,0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                <Image Source="latteMacchiato" Aspect="AspectFit" HeightRequest="50" Margin="0,0,0,0"></Image>
+                <Button Clicked="Button_Clicked_Macchiato" TextTransform="None" HeightRequest="60" VerticalOptions="Center" BackgroundColor="#f6f6f6" Text="Macchiato                           ➤" CornerRadius="30" WidthRequest="300" Margin="0,0,-12,0" FontAttributes="Bold" FontSize="20"></Button>
+            </StackLayout>
+        </Frame>
+
+        <Frame Padding="0,0,0,0" CornerRadius="50" HeightRequest="70" Margin="0,10,0,0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                <Image Source="mocha3" Aspect="AspectFit" HeightRequest="50" Margin="0,0,0,0"></Image>
+                <Button Clicked="Button_Clicked_Mocha" TextTransform="None" HeightRequest="60" VerticalOptions="Center" BackgroundColor="#f6f6f6" Text="Mocha                                 ➤" CornerRadius="30" WidthRequest="300" Margin="0,0,-12,0" FontAttributes="Bold" FontSize="20"></Button>
+            </StackLayout>
+        </Frame>
+
+        <Frame Padding="0,0,0,0" CornerRadius="50" HeightRequest="70" Margin="0,10,0,0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                <Image Source="latte" Aspect="AspectFit" HeightRequest="50" Margin="0,0,0,0"></Image>
+                <Button Clicked="Button_Clicked_Latte" TextTransform="None" HeightRequest="60" VerticalOptions="Center" BackgroundColor="#f6f6f6" Text="Latte                                    ➤" CornerRadius="30" WidthRequest="300" Margin="0,0,-12,0" FontAttributes="Bold" FontSize="20"></Button>
+            </StackLayout>
+        </Frame>
+        
+    </StackLayout>
+    
+</ContentPage>

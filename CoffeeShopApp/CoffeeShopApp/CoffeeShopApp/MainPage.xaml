@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeShopApp.MainPage"
+             BackgroundImageSource="w1o1">
+
+    <StackLayout Margin="0,0,0,0">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Margin="0,90,0,0">
+            <Label FontSize="26" TextColor="Black" FontAttributes="Bold">your new</Label>
+            <Label FontSize="26" TextColor="#B4846C" FontAttributes="Bold">Best Friend</Label>
+        </StackLayout>
+        <Frame HorizontalOptions="Center" WidthRequest="210"  Padding="0,20,0,20" BackgroundColor="White" HeightRequest="100" CornerRadius="90" Margin="0,50,0,0">
+            <Image Source="coffee"></Image>
+        </Frame>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+            <Label FontSize="26" TextColor="Black" FontAttributes="Bold">coffee</Label>
+            <BoxView BackgroundColor="#B4846C" WidthRequest="5" HeightRequest="10" Margin="0,3,0,0"></BoxView>
+            <Label FontSize="26" TextColor="#B4846C" FontAttributes="Bold">HUB</Label>
+        </StackLayout>
+        <Frame Padding="0" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" Margin="0,110,0,0" CornerRadius="60">
+            <Button BackgroundColor="#f6f6f6" Text="Login" TextColor="Black" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" WidthRequest="250"></Button>
+        </Frame>
+        <Frame Padding="0" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" Margin="0,15,0,0" CornerRadius="60">
+            <Button BackgroundColor="#f6f6f6" Text="Register" TextColor="Black" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" WidthRequest="250" Clicked="Button_Clicked_ShowRegisterPage"></Button>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>

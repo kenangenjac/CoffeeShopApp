@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeShopApp.EspressoPage"
+            NavigationPage.IconColor="Gray"
+              >
+
+    <StackLayout>
+        <Frame Padding="0" HeightRequest="350" CornerRadius="30" Margin="0,-20,0,0">
+            <RelativeLayout BackgroundColor="#E2E2E2">
+                <Image Source="w1o1" Aspect="Fill"/>
+                <StackLayout TranslationY="25"  Padding="0" MinimumWidthRequest="100">
+                    <!--<Label XAlign="Center" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="If you have feedback / comments or want to&#10;report a problem please contact us"/>-->
+                    <Button BackgroundColor="Transparent" Text="&#x2B05;" TextColor="#f6f6f6" FontAttributes="Bold" FontSize="35" Clicked="Button_Clicked_EspressoBack"></Button>
+                </StackLayout>
+                <!--<StackLayout BackgroundColor="#E2E2E2" TranslationY="195" Opacity=".6" Padding="10,5,10,5" MinimumWidthRequest="100">
+                    <Label XAlign="Center" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="If you have feedback / comments or want to&#10;report a problem please contact us"/>
+                </StackLayout>-->
+                <StackLayout TranslationY="90" TranslationX="150" Padding="0" MinimumWidthRequest="100">
+                    <!--<Label XAlign="Center" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="If you have feedback / comments or want to&#10;report a problem please contact us"/>-->
+                    <Label FontAttributes="Bold" FontSize="26" TextColor="Black">Espresso</Label>
+                </StackLayout>
+
+                <StackLayout TranslationY="150" TranslationX="150" Padding="0" MinimumWidthRequest="100">
+                    <!--<Label XAlign="Center" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="If you have feedback / comments or want to&#10;report a problem please contact us"/>-->
+                    <Image Source="espresso" Aspect="AspectFit" HeightRequest="120"></Image>
+                </StackLayout>
+            </RelativeLayout>
+        </Frame>
+
+        <StackLayout Padding="15,10,10,10" Orientation="Horizontal" Spacing="170">
+            <StackLayout>
+                <Label TextColor="Black" FontSize="20">Espresso</Label>
+                <Label x:Name="price" TextColor="#B4846C" FontSize="22" FontAttributes="Bold">0.00 BAM</Label>
+            </StackLayout>
+
+            <StackLayout Spacing="13" Orientation="Horizontal" VerticalOptions="Center">
+                <Button BackgroundColor="#B4846C" TextColor="White" Text="-" WidthRequest="40" CornerRadius="40" HeightRequest="40" FontSize="30" Padding="0,-3,0,0" Clicked="Button_Clicked_Minus"></Button>
+                <Label TextColor="Black" Text="0" x:Name="amountLabel" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="18"/>
+                <Button BackgroundColor="#B4846C" TextColor="White" Text="+" WidthRequest="40" CornerRadius="40" HeightRequest="40" FontSize="20" Padding="0,-1,0,0" Clicked="Button_Clicked_Plus"></Button>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <StackLayout Padding="15,10,10,10" WidthRequest="180" HorizontalOptions="Start">
+                <Label TextColor="Black" FontSize="16" FontAttributes="Bold">Size</Label>
+                <StackLayout Orientation="Horizontal" Spacing="25">
+                    <Image Source="espresso" Aspect="AspectFit" HeightRequest="35" Margin="0,13,0,0"></Image>
+                    <Image Source="espresso" Aspect="AspectFit" HeightRequest="40" Margin="0,10,0,0"></Image>
+                    <Image Source="espresso" Aspect="AspectFit" HeightRequest="50"></Image>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="38" HorizontalOptions="Center" Margin="-16,0,0,0">
+                    <RadioButton x:Name="rb_Small" CheckedChanged="rb_Small_CheckedChanged"></RadioButton>
+                    <RadioButton x:Name="rb_Medium" Margin="-5,0,0,0" CheckedChanged="rb_Medium_CheckedChanged"></RadioButton>
+                    <RadioButton x:Name="rb_Large" CheckedChanged="rb_Large_CheckedChanged"></RadioButton>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Padding="15,10,10,10" WidthRequest="180" HorizontalOptions="Start">
+                <Label TextColor="Black" FontSize="16" FontAttributes="Bold">Sugar (in cubes)</Label>
+                <StackLayout Orientation="Horizontal" Spacing="29" Margin="0,15,0,0">
+                    <Image Source="twoCubes" Aspect="AspectFit" HeightRequest="35"></Image>
+                    <Image Source="oneCube" Aspect="AspectFit" HeightRequest="35" Margin="0,0,0,0"></Image>
+                    <Image Source="noCubes" Aspect="AspectFit" HeightRequest="35" Margin="0,0,0,0"></Image>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center" Margin="-16,0,0,0">
+                    <RadioButton x:Name="noCubesLabel"></RadioButton>
+                    <RadioButton x:Name="OneCubeLabel" IsChecked="True"></RadioButton>
+                    <RadioButton x:Name="TwoCubesLabel"></RadioButton>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+        <Button CornerRadius="50" HeightRequest="60" Margin="0,10,0,0" HorizontalOptions="Center" WidthRequest="300" Text="Add to cart" TextColor="#B4846C" FontAttributes="Bold" FontSize="22" BackgroundColor="#f6f6f6" BorderWidth="2" BorderColor="#B4846C"></Button>
+            
+    </StackLayout>
+    
+</ContentPage>
