@@ -29,9 +29,9 @@ namespace CoffeeShopApp
             userLabel.Text = u.UserFirstName;
         }
 
-        private void Button_Clicked_VisitProfile(object sender, EventArgs e)
+        async void Button_Clicked_VisitProfile(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new ProfilePage(user));
         }
 
         async void Button_Clicked_Espresso(object sender, EventArgs e)

@@ -45,10 +45,10 @@
                     <Image Source="latteMacchiato" Aspect="AspectFit" HeightRequest="40" Margin="0,10,0,0"></Image>
                     <Image Source="latteMacchiato" Aspect="AspectFit" HeightRequest="50"></Image>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" Spacing="38" HorizontalOptions="Center" Margin="-16,0,0,0">
-                    <RadioButton x:Name="rb_Small" CheckedChanged="rb_Small_CheckedChanged"></RadioButton>
-                    <RadioButton x:Name="rb_Medium" Margin="-5,0,0,0" CheckedChanged="rb_Medium_CheckedChanged"></RadioButton>
-                    <RadioButton x:Name="rb_Large" CheckedChanged="rb_Large_CheckedChanged"></RadioButton>
+                <StackLayout Orientation="Horizontal" Spacing="38" HorizontalOptions="Center" WidthRequest="180">
+                    <RadioButton x:Name="rb_Small" Margin="0,0,0,0" CheckedChanged="rb_Small_CheckedChanged"></RadioButton>
+                    <RadioButton x:Name="rb_Medium" Margin="-8,0,-1,0" CheckedChanged="rb_Medium_CheckedChanged"></RadioButton>
+                    <RadioButton x:Name="rb_Large" Margin="0,0,0,0" CheckedChanged="rb_Large_CheckedChanged"></RadioButton>
                 </StackLayout>
             </StackLayout>
 
@@ -61,7 +61,7 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center" Margin="-16,0,0,0">
                     <RadioButton x:Name="noCubesLabel"></RadioButton>
-                    <RadioButton x:Name="OneCubeLabel" IsChecked="True"></RadioButton>
+                    <RadioButton Margin="3,0,0,0" x:Name="OneCubeLabel" IsChecked="True"></RadioButton>
                     <RadioButton x:Name="TwoCubesLabel"></RadioButton>
                 </StackLayout>
             </StackLayout>

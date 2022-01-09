@@ -10,19 +10,14 @@
             <RelativeLayout BackgroundColor="#E2E2E2">
                 <Image Source="w1o1" Aspect="Fill"/>
                 <StackLayout TranslationY="25"  Padding="0" MinimumWidthRequest="100">
-                    <!--<Label XAlign="Center" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="If you have feedback / comments or want to&#10;report a problem please contact us"/>-->
                     <Button BackgroundColor="Transparent" Text="&#x2B05;" TextColor="#f6f6f6" FontAttributes="Bold" FontSize="35" Clicked="Button_Clicked_EspressoBack"></Button>
                 </StackLayout>
-                <!--<StackLayout BackgroundColor="#E2E2E2" TranslationY="195" Opacity=".6" Padding="10,5,10,5" MinimumWidthRequest="100">
-                    <Label XAlign="Center" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="If you have feedback / comments or want to&#10;report a problem please contact us"/>
-                </StackLayout>-->
+
                 <StackLayout TranslationY="90" TranslationX="150" Padding="0" MinimumWidthRequest="100">
-                    <!--<Label XAlign="Center" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="If you have feedback / comments or want to&#10;report a problem please contact us"/>-->
                     <Label FontAttributes="Bold" FontSize="26" TextColor="Black">Espresso</Label>
                 </StackLayout>
 
                 <StackLayout TranslationY="150" TranslationX="150" Padding="0" MinimumWidthRequest="100">
-                    <!--<Label XAlign="Center" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="If you have feedback / comments or want to&#10;report a problem please contact us"/>-->
                     <Image Source="espresso" Aspect="AspectFit" HeightRequest="120"></Image>
                 </StackLayout>
             </RelativeLayout>
@@ -49,9 +44,9 @@
                     <Image Source="espresso" Aspect="AspectFit" HeightRequest="40" Margin="0,10,0,0"></Image>
                     <Image Source="espresso" Aspect="AspectFit" HeightRequest="50"></Image>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" Spacing="38" HorizontalOptions="Center" Margin="-16,0,0,0">
-                    <RadioButton x:Name="rb_Small" CheckedChanged="rb_Small_CheckedChanged"></RadioButton>
-                    <RadioButton x:Name="rb_Medium" Margin="-5,0,0,0" CheckedChanged="rb_Medium_CheckedChanged"></RadioButton>
+                <StackLayout Orientation="Horizontal" Spacing="38" HorizontalOptions="Center" Margin="0,0,0,0" WidthRequest="180">
+                    <RadioButton x:Name="rb_Small" Margin="-2,0,0,0" CheckedChanged="rb_Small_CheckedChanged"></RadioButton>
+                    <RadioButton x:Name="rb_Medium" Margin="-7,0,-1,0" CheckedChanged="rb_Medium_CheckedChanged"></RadioButton>
                     <RadioButton x:Name="rb_Large" CheckedChanged="rb_Large_CheckedChanged"></RadioButton>
                 </StackLayout>
             </StackLayout>
@@ -65,7 +60,7 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center" Margin="-16,0,0,0">
                     <RadioButton x:Name="noCubesLabel"></RadioButton>
-                    <RadioButton x:Name="OneCubeLabel" IsChecked="True"></RadioButton>
+                    <RadioButton Margin="3,0,0,0" x:Name="OneCubeLabel" IsChecked="True"></RadioButton>
                     <RadioButton x:Name="TwoCubesLabel"></RadioButton>
                 </StackLayout>
             </StackLayout>
