@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeShopApp.Login">
+    
+    <StackLayout VerticalOptions="CenterAndExpand" Padding="20,200,20,150" Spacing="15">
+        <StackLayout Margin="0,-150,0,0">
+            <Image Source="coffeeBeans" Aspect="AspectFit" HeightRequest="100"></Image>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10" Margin="0,0,0,70">
+            <Label FontSize="26" TextColor="Black" FontAttributes="Bold">coffee</Label>
+            <BoxView BackgroundColor="#B4846C" WidthRequest="5" HeightRequest="10" Margin="0,3,0,0"></BoxView>
+            <Label FontSize="26" TextColor="#B4846C" FontAttributes="Bold">HUB</Label>
+        </StackLayout>
+
+        <Entry x:Name="email_Login" Placeholder="Email" TextColor="Black" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
+
+        <Entry x:Name="password_Login" Placeholder="Password" IsPassword="True" TextColor="Black" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
+
+        <Frame Padding="0" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" Margin="0,30,0,0" CornerRadius="60">
+            <Button BackgroundColor="#f6f6f6" Text="Login" TextColor="Black" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" WidthRequest="250" Clicked="Button_Clicked_Login"></Button>
+        </Frame>
+
+        <Button Padding="0,-15,0,0" BackgroundColor="Transparent" Text="Don't have an account? Sign Up" TextColor="Blue" TextTransform="None" Clicked="Button_Clicked_ShowRegisterPage"></Button>
+    </StackLayout>
+
+</ContentPage>

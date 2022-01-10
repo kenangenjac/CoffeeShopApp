@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeShopApp.CartPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <StackLayout>
+        <Frame Padding="0" HeightRequest="300" CornerRadius="30" Margin="0,-20,0,0">
+            <RelativeLayout BackgroundColor="#E2E2E2">
+                <Image Source="w1o1" Aspect="Fill"/>
+
+                <StackLayout TranslationY="25"  Padding="0" MinimumWidthRequest="100">
+                    <Button BackgroundColor="Transparent" Text="&#x2B05;" TextColor="#f6f6f6" FontAttributes="Bold" FontSize="35" Clicked="Button_Clicked_CartBack"></Button>
+                </StackLayout>
+
+                <StackLayout TranslationY="90" TranslationX="150" Padding="0" MinimumWidthRequest="100">
+                    <Label FontAttributes="Bold" FontSize="26" TextColor="Black">Checkout</Label>
+                </StackLayout>
+
+                <StackLayout TranslationY="150" TranslationX="140" Padding="0" MinimumWidthRequest="100">
+                    <Image Source="shoppingCart" Aspect="AspectFit" HeightRequest="120"></Image>
+                </StackLayout>
+            </RelativeLayout>
+        </Frame>
+
+        <StackLayout Orientation="Horizontal" Padding="20" HorizontalOptions="Center">
+            <Label TextColor="Black" FontSize="22">Your Total:</Label>
+            <Label x:Name="priceLabel" TextColor="Black" FontSize="22" FontAttributes="Bold">0.00 BAM</Label>
+        </StackLayout>
+
+        <Image Source="coffeeBeans" Aspect="AspectFit" HeightRequest="80"></Image>
+
+        <Frame Padding="0" HeightRequest="200" CornerRadius="30" Margin="0,20,0,0">
+            <RelativeLayout BackgroundColor="#E2E2E2">
+                <Image Source="w1o2" Aspect="Fill"/>
+
+                <StackLayout TranslationY="25" TranslationX="130" Padding="0" MinimumWidthRequest="100">
+                    <Button Text="Delete Cart" TextTransform="None" FontSize="20" FontAttributes="Bold" BackgroundColor="#f6f6f6" CornerRadius="40" HorizontalOptions="Center" WidthRequest="150" Clicked="Button_Clicked_DeleteCart"></Button>
+                </StackLayout>
+                
+                <StackLayout TranslationY="85" TranslationX="80" Padding="0" MinimumWidthRequest="100">
+                    <Button Text="Checkout" FontSize="20" FontAttributes="Bold" BackgroundColor="White" CornerRadius="40" HorizontalOptions="Center" WidthRequest="250" Clicked="Button_Clicked_Checkout"></Button>
+                </StackLayout>
+
+            </RelativeLayout>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>
