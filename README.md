@@ -1,2 +1,4 @@
 # CoffeeShopApp
- Multi Page Mobile UI/UX App made in Xamarin.Forms and C#
+ Multi Page Mobile App UI/UX made in Xamarin.Forms and C#
+ 
+ 
