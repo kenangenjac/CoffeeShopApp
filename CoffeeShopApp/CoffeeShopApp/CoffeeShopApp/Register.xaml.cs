@@ -18,6 +18,7 @@ namespace CoffeeShopApp
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            dateOfBirth.MaximumDate = DateTime.Today;
         }
 
         public Register(List<User> u)

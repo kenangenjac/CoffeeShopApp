@@ -43,8 +43,8 @@ namespace CoffeeShopApp
 
             if (answer)
             {
-                await Navigation.PopToRootAsync();
-                //await Navigation.PushAsync(new Login(user));
+                //await Navigation.PopToRootAsync();
+                await Navigation.PushAsync(new Login(user, true));
             }
         }
     }

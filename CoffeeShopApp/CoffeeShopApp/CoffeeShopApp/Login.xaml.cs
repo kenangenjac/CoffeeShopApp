@@ -14,18 +14,22 @@ namespace CoffeeShopApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
-        List<User> users;
-        //User user;
+        List<User> users = new List<User>();
+        User user;
+        bool isSingleUser;
         public Login(IList<User> u)
         {
             InitializeComponent();
             users = (List<User>)u;
+            isSingleUser = false;
         }
 
-        public Login(/*User u*/)
+        public Login(User u, bool isUser)
         {
             InitializeComponent();
-            //user = u;
+            user = u;
+            //users.Add(user);
+            isSingleUser = isUser;
         }
 
         private bool CheckEntry()
@@ -47,36 +51,55 @@ namespace CoffeeShopApp
             {
                 bool isFound = false;
                 int index = 0;
+                //bool isList = false;
 
-                for (int i = 0; i < users.Count; i++)
+                if(isSingleUser)
                 {
-                    if (email_Login.Text == users[i].UserEmail && password_Login.Text == users[i].UserPassword)
+                    if (user.UserEmail == email_Login.Text && user.UserPassword == password_Login.Text)
                     {
                         isFound = true;
-                        index = i;
-                        break;
                     }
-                }
 
-                if (!isFound)
-                {
-                    await DisplayAlert("Warning", "Netačan email ili password", "OK");
+                    if (!isFound)
+                    {
+                        await DisplayAlert("Warning", "Netačan email ili password", "OK");
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(new CoffeeList(user));
+                    }
                 }
                 else
                 {
-                    await Navigation.PushAsync(new CoffeeList(users[index]));
+                    for (int i = 0; i < users.Count; i++)
+                    {
+                        if (email_Login.Text == users[i].UserEmail && password_Login.Text == users[i].UserPassword)
+                        {
+                            isFound = true;
+                            index = i;
+                            break;
+                        }
+                    }
+
+                    if (!isFound)
+                    {
+                        await DisplayAlert("Warning", "Netačan email ili password", "OK");
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(new CoffeeList(users[index]));
+                    }
                 }
             }
             else
             {
                 await DisplayAlert("Warning", "Molimo unesite podatke", "OK");
             }
-            
-
         }
 
         async void Button_Clicked_ShowRegisterPage(object sender, EventArgs e)
         {
+            users.Add(user);
             await Navigation.PushAsync(new Register(users));
         }
     }
