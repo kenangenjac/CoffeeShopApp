@@ -67,10 +67,7 @@ namespace CoffeeShopApp
             }
         }
 
-        async void Button_Clicked_LoginPage(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Login(users));
-        }
+        async void Button_Clicked_LoginPage(object sender, EventArgs e) => await Navigation.PushAsync(new Login(users));
     }
 }
 

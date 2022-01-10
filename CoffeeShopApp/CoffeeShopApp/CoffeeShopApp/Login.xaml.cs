@@ -15,10 +15,17 @@ namespace CoffeeShopApp
     public partial class Login : ContentPage
     {
         List<User> users;
+        //User user;
         public Login(IList<User> u)
         {
             InitializeComponent();
             users = (List<User>)u;
+        }
+
+        public Login(/*User u*/)
+        {
+            InitializeComponent();
+            //user = u;
         }
 
         private bool CheckEntry()

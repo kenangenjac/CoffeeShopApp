@@ -25,5 +25,9 @@ namespace CoffeeShopApp
             
              await Navigation.PushAsync(new Register());            
         }
+        private void Button_Clicked_ShowLoginPage(object sender, EventArgs e)
+        {
+            //await Navigation.PushAsync(new Login());
+        }
     }
 }

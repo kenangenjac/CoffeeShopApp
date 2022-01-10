@@ -20,21 +20,32 @@ namespace CoffeeShopApp
             NavigationPage.SetHasNavigationBar(this, false);
 
             user = u;
-        }
 
-        async void Button_Clicked_ChangeInfo(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ChangeInfoPage());
+            firstNameLabel.Text = user.UserFirstName;
+            lastNameLabel.Text = user.UserLastName;
+            mailLabel.Text = user.UserEmail;
+            dateLabel.Text = (user.UserBirthDAte.Date).ToString("d");
         }
 
         async void Button_Clicked_Cart(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CartPage());
+            await Navigation.PushAsync(new CartPage(user));
         }
 
         async void Button_Clicked_ProfileBack(object sender, EventArgs e)
         {
-            await Navigation.PopAsync(true);
+            await Navigation.PopAsync();
+        }
+
+        async private void Button_Clicked_Logout(object sender, EventArgs e)
+        {
+            bool answer = await DisplayAlert("Logout", "Are You sure You want to Log Out?", "Yes", "No");
+
+            if (answer)
+            {
+                await Navigation.PopToRootAsync();
+                //await Navigation.PushAsync(new Login(user));
+            }
         }
     }
 }

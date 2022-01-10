@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoffeeShopApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +14,16 @@ namespace CoffeeShopApp
     public partial class MacchiatoPage : ContentPage
     {
         int amountCounter;
-        public MacchiatoPage()
+        User user;
+        double itemPrice;
+        public MacchiatoPage(User u)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
             amountCounter = Int32.Parse(amountLabel.Text);
+
+            user = u;
         }
 
         async void Button_Clicked_MacchiatoBack(object sender, EventArgs e)
@@ -30,7 +35,7 @@ namespace CoffeeShopApp
         {
             amountCounter++;
             amountLabel.Text = amountCounter.ToString();
-            double itemPrice = (rb_Small.IsChecked ? 1.50 : (rb_Medium.IsChecked ? 2.00 : 2.50)) * int.Parse(amountLabel.Text);
+            itemPrice = (rb_Small.IsChecked ? 1.50 : (rb_Medium.IsChecked ? 2.00 : 2.50)) * int.Parse(amountLabel.Text);
             price.Text = itemPrice.ToString("0.00") + " BAM";
         }
 
@@ -44,28 +49,43 @@ namespace CoffeeShopApp
             {
                 amountCounter--;
                 amountLabel.Text = amountCounter.ToString();
-                double itemPrice = (rb_Small.IsChecked ? 1.50 : (rb_Medium.IsChecked ? 2.00 : 2.50)) * int.Parse(amountLabel.Text);
+                itemPrice = (rb_Small.IsChecked ? 1.50 : (rb_Medium.IsChecked ? 2.00 : 2.50)) * int.Parse(amountLabel.Text);
                 price.Text = itemPrice.ToString("0.00") + " BAM";
             }
         }
 
         private void rb_Small_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            double itemPrice = 1.50 * int.Parse(amountLabel.Text);
+            itemPrice = 1.50 * int.Parse(amountLabel.Text);
             price.Text = itemPrice.ToString("0.00") + " BAM";
         }
 
         private void rb_Medium_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            double itemPrice = 2.00 * int.Parse(amountLabel.Text);
+            itemPrice = 2.00 * int.Parse(amountLabel.Text);
             price.Text = itemPrice.ToString("0.00") + " BAM";
         }
 
         private void rb_Large_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            double itemPrice = 2.50 * int.Parse(amountLabel.Text);
-            //price.Text = coffeePrice.ToString() + " BAM";
+            itemPrice = 2.50 * int.Parse(amountLabel.Text);
             price.Text = string.Format("{0:0.00}", itemPrice) + " BAM";
+        }
+
+        private void Button_Clicked_Cart(object sender, EventArgs e)
+        {
+            if (itemPrice <= 0)
+            {
+                DisplayAlert("Warning", "Niste odabrali proizvod", "OK");
+            }
+            else
+            {
+                user.prices.Add(itemPrice);
+                itemPrice = 0;
+                amountLabel.Text = "0";
+                DisplayAlert("Cart", "Items added to cart. Thank You!", "OK");
+                price.Text = string.Format("{0:0.00}", itemPrice) + " BAM";
+            }
         }
     }
 }

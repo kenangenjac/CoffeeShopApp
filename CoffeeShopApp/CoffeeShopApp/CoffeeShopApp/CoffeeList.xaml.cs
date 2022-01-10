@@ -19,7 +19,7 @@ namespace CoffeeShopApp
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private User user = new User();
+        private User user;
         public CoffeeList(User u)
         {
             InitializeComponent();
@@ -36,27 +36,27 @@ namespace CoffeeShopApp
 
         async void Button_Clicked_Espresso(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EspressoPage());
+            await Navigation.PushAsync(new EspressoPage(user));
         }
 
         async void Button_Clicked_Cappuccino(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CappuccinoPage());
+            await Navigation.PushAsync(new CappuccinoPage(user));
         }
 
         async void Button_Clicked_Macchiato(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MacchiatoPage());
+            await Navigation.PushAsync(new MacchiatoPage(user));
         }
 
         async void Button_Clicked_Mocha(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MochaPage());
+            await Navigation.PushAsync(new MochaPage(user));
         }
 
         async void Button_Clicked_Latte(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new LattePage());
+            await Navigation.PushAsync(new LattePage(user));
         }
     }
 }

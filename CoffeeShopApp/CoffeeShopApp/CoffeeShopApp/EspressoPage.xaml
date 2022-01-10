@@ -66,7 +66,7 @@
             </StackLayout>
         </StackLayout>
 
-        <Button CornerRadius="50" HeightRequest="60" Margin="0,10,0,0" HorizontalOptions="Center" WidthRequest="300" Text="Add to cart" TextColor="#B4846C" FontAttributes="Bold" FontSize="22" BackgroundColor="#f6f6f6" BorderWidth="2" BorderColor="#B4846C"></Button>
+        <Button CornerRadius="50" HeightRequest="60" Margin="0,10,0,0" HorizontalOptions="Center" WidthRequest="300" Text="Add to cart" TextColor="#B4846C" FontAttributes="Bold" FontSize="22" BackgroundColor="#f6f6f6" BorderWidth="2" BorderColor="#B4846C" Clicked="Button_Clicked_Cart"></Button>
             
     </StackLayout>
     

@@ -22,6 +22,8 @@ namespace CoffeeShopApp.Models
         private string userPassword { get; set; }
         public string UserPassword { get => userPassword; set { } }
 
+        public List<double> prices = new List<double>();
+
         public User(string userFirstName, string userLastName, string userEmail, DateTime userBirthDate, string userPassword)
         {
             this.userFirstName = userFirstName;
