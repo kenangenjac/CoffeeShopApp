@@ -11,6 +11,6 @@
   <img width="240" alt="ss5" src="https://user-images.githubusercontent.com/63546118/148811576-b0900be3-2ba1-48a4-92b0-109c3917eab8.png">
   <img width="240" alt="ss6" src="https://user-images.githubusercontent.com/63546118/148811583-7aa0494d-07a4-453a-a461-340c8b27d608.png">
 </p>
-<p float="left">
+<p align="center">
   <img width="238" alt="ss7" src="https://user-images.githubusercontent.com/63546118/148811589-3f2dc078-f8b3-48cd-9e16-d104c2ad613a.png">
  </p>
